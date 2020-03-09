@@ -2,12 +2,15 @@ import java.util.Scanner;
 
 public class Main {
     Scanner input;
+    UserData userData;
+    User currentUser;
+    Login login;
 
     Main() {
         input = new Scanner(System.in);
     }
 
-    public String initialMessage() {
+    public String welcomeMessage() {
         System.out.println("Welcome to Foster a Post!  You can login or Sign Up!");
         // Main main = new Main();
         return "Foster";
@@ -18,7 +21,7 @@ public class Main {
     }
     public static void main(String[] args) {
         Main main = new Main();
-        String getUserName = main.initialMessage();
+        String getUserName = main.welcomeMessage();
         if (!getUserName.isBlank()) {
             main.userDashBoard(getUserName, main);
         }
