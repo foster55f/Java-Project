@@ -50,7 +50,14 @@ public class Main {
 
     public void userDashBoard(String userName, Main main) {
         System.out.println("Welcome "+ userName);
-        
+        System.out.println("1. View my updates");
+        System.out.println("2. View buddies");
+        System.out.println("3. Change my updates");
+        System.out.println("4. Delete my updates");
+        System.out.println("5. Add buddies");
+        System.out.println("6. Delete buddies");
+        System.out.println("7. Logout");
+
     }
     
     public String makeAccount() {
