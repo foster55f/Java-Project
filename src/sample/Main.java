@@ -49,7 +49,7 @@ public class Main {
     }
 
     public void userDashBoard(String userName, Main main) {
-        System.out.println("Welcome "+ userName);
+        System.out.println("Welcome "+ userName + ", please enter a number:");
         System.out.println("1. View my updates");
         System.out.println("2. View buddies");
         System.out.println("3. Change my updates");
@@ -57,6 +57,14 @@ public class Main {
         System.out.println("5. Add buddies");
         System.out.println("6. Delete buddies");
         System.out.println("7. Logout");
+
+        String option = input.nextLine();
+
+        if (option.equals("1")) {
+            // print all user's updates
+        System.out.println("you chose 1!");
+
+        }
 
     }
     
