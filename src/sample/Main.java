@@ -1,4 +1,3 @@
-package src.sample;
 
 import java.util.Scanner;
 
@@ -48,6 +47,11 @@ public class Main {
             return "Nice try.  Try again.";
         }
     }
+
+    public void userDashBoard(String userName, Main main) {
+        System.out.println("Welcome "+ userName);
+        
+    }
     
     public String makeAccount() {
         // make a new user and add to userData
@@ -57,12 +61,9 @@ public class Main {
 
         System.out.println("What do you want for a UserName: ");
         String userName = input.nextLine();
-        
-
+        return "";
     }
 
-    public void userDashBoard(String userName, Main main) {
-    }
     public static void main(String[] args) {
         Main main = new Main();
         String getUserName = main.welcomeMessage();

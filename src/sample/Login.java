@@ -1,4 +1,3 @@
-package src.sample;
 
 import java.util.ArrayList;
 
@@ -9,13 +8,32 @@ public class Login {
 
     Login(){
         userNames.add("fosterthepeople");
+        userNames.add("auroraisthebest");
+        userNames.add("steve");
+
+
 
         passwords.add("foster55");
+        passwords.add("aurora55");
+        passwords.add("steve55");
     }
 
     public boolean checkLogin(String userName, String password) {
-        System.out.println(userNames);
-        return true;
+        int index = userNames.indexOf(userName);
+        boolean passwordCheck = false;
+        if (index != -1) {
+            passwordCheck = password.equals(passwords.get(index));
+        }
+        if (index != -1 && passwordCheck) {
+            return true;
+        } else if (index != -1) {
+            System.out.println("Wrong Password");
+            return false;
+        } else {
+            System.out.println("Username does not exist. Create an account");
+            return false;
+        }
+        
     }
     public static void main(String[] args) {
         
