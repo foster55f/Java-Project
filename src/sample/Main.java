@@ -65,12 +65,19 @@ public class Main {
             // print all user's updates
             ArrayList<String> updates = userData.updateData(userName);
             System.out.println(updates);
-        
+
             System.out.println("");
 
             main.userDashBoard(userName, main);
         }
+        if (option.equals("2")) {
+            // print all user's buddies
+            ArrayList<String> friends = userData.viewBuddies(userName);
+            System.out.println(friends);
 
+            System.out.println("");
+            main.userDashBoard(userName, main);
+        }
     }
     
     public String makeAccount() {
