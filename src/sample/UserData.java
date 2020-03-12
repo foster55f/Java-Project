@@ -49,7 +49,18 @@ public class UserData {
         for (User user : userData) {
             if (user.myUserName.equals(userName)) {
                 currentUser = user;
-                return currentUser.updates;   
+                return currentUser.updates;
+            }
+        }
+        return new ArrayList<String>();
+    }
+    
+    public ArrayList<String> viewBuddies(String userName) {
+        User currentUser;
+        for (User user : userData) {
+            if (user.myUserName.equals(userName)) {
+                currentUser = user;
+                return currentUser.friends;   
             }
         }
         return new ArrayList<String>(); 
