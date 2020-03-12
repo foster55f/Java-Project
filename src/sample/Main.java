@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -62,8 +63,12 @@ public class Main {
 
         if (option.equals("1")) {
             // print all user's updates
-        System.out.println("you chose 1!");
+            ArrayList<String> updates = userData.updateData(userName);
+            System.out.println(updates);
+        
+            System.out.println("");
 
+            main.userDashBoard(userName, main);
         }
 
     }
