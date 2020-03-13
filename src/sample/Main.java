@@ -15,7 +15,7 @@ public class Main {
     }
 
     public String welcomeMessage() {
-        System.out.println("Welcome to Foster a Post!  You can login or Sign Up Now!");
+        System.out.println("Welcome to your FriendPost!  You can login or Sign Up Now!");
         Main main = new Main();
         String option = input.nextLine().toLowerCase();
         if (option.equals("login")) {
@@ -53,8 +53,8 @@ public class Main {
         System.out.println("Welcome "+ userName + ", please enter a number:");
         System.out.println("1. View my updates");
         System.out.println("2. View buddies");
-        System.out.println("3. Change my updates");
-        System.out.println("4. Delete my updates");
+        System.out.println("3. Change my updates to buddies");
+        System.out.println("4. Delete my updates to buddies");
         System.out.println("5. Add buddies");
         System.out.println("6. Delete buddies");
         System.out.println("7. Logout");
@@ -64,17 +64,17 @@ public class Main {
         if (option.equals("1")) {
             // print all user's updates
             ArrayList<String> updates = userData.updateData(userName);
+            System.out.println("Updates:");
             System.out.println(updates);
 
             System.out.println("");
-
             main.userDashBoard(userName, main);
         }else if(option.equals("2")) {
             // print all user's buddies
             ArrayList<String> friends = userData.viewBuddies(userName);
+            System.out.println("Buddy List:");
             System.out.println(friends);
 
-            System.out.println("");
             main.userDashBoard(userName, main);
         } else if (option.equals("5")) {
             ArrayList<String> friends = userData.viewBuddies(userName);
@@ -86,7 +86,7 @@ public class Main {
 
             // display new friends list
             ArrayList<String> newFriends = userData.viewBuddies(userName);
-            System.out.println("Buddy List: ");
+            System.out.println("Buddy List:");
             System.out.println(newFriends);
 
             main.userDashBoard(userName, main);
