@@ -79,7 +79,17 @@ public class Main {
         } else if (option.equals("5")) {
             ArrayList<String> friends = userData.viewBuddies(userName);
             System.out.println(friends);
+            System.out.println("What is name of buddy that you want to add to your buddies?");
+            String newFriend = input.nextLine();
 
+            userData.addBuddies(userName, newFriend);
+
+            // display new friends list
+            ArrayList<String> newFriends = userData.viewBuddies(userName);
+            System.out.println("Buddy List: ");
+            System.out.println(newFriends);
+
+            main.userDashBoard(userName, main);
         }
     }
     
