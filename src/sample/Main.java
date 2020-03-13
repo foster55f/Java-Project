@@ -69,14 +69,17 @@ public class Main {
             System.out.println("");
 
             main.userDashBoard(userName, main);
-        }
-        if (option.equals("2")) {
+        }else if(option.equals("2")) {
             // print all user's buddies
             ArrayList<String> friends = userData.viewBuddies(userName);
             System.out.println(friends);
 
             System.out.println("");
             main.userDashBoard(userName, main);
+        } else if (option.equals("5")) {
+            ArrayList<String> friends = userData.viewBuddies(userName);
+            System.out.println(friends);
+
         }
     }
     
