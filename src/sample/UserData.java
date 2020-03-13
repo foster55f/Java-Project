@@ -66,6 +66,16 @@ public class UserData {
         return new ArrayList<String>(); 
     }
 
+    public ArrayList<String> addBuddies(String userName, String newFriend) {
+        User currentUser;
+        for (User user : userData) {
+            if (user.myUserName.equals(userName)) {
+                currentUser = user;
+                return currentUser.friends.add(newFriend);   
+            }
+        }
+    }
+
 
 
 
