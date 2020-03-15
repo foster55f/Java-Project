@@ -24,7 +24,7 @@ public class UserData {
 
         update1 = new ArrayList<String>();
         update1.add("Hello my friends!");
-        update1.add("Whats going on my friends!");
+        update1.add("Whats going on my friends?");
         update1.add("Awfully quiet my friends!");
 
         update2 = new ArrayList<String>();
@@ -55,14 +55,16 @@ public class UserData {
         return new ArrayList<String>();
     }
 
-    public ArrayList<String> changeUpdates(String userName) {
-        User currUser;
+    public ArrayList<String> changeUpdates(String userName, String index, String newUpdate) {
+        User currentUser;
         for (User user : userData) {
-            System.out.println("hello");
-            return update3;
+            if (user.myUserName.equals(userName)) {
+                currentUser = user;
+                int integerIndex = Integer.parseInt(index);
+                currentUser.updates.set(integerIndex, newUpdate);
+            }
         }
         return new ArrayList<String>();
-
     }
 
     public ArrayList<String> viewBuddies(String userName) {

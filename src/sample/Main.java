@@ -71,7 +71,8 @@ public class Main {
             System.out.println("");
             System.out.println("Updates:");
             updates.forEach(update -> {
-                System.out.println(update);
+                int index = updates.indexOf(update);
+                System.out.println(String.format(index + ": " + update));
             });
 
             System.out.println("");
@@ -101,10 +102,24 @@ public class Main {
             ArrayList<String> updates = userData.displayUpdates(userName);
             System.out.println("");
             System.out.println("Here are your current updates to friends:");
+            System.out.println("");
             updates.forEach(update -> {
-                System.out.println(update);
+                int index = updates.indexOf(update);
+                System.out.println(String.format(index + ": " + update));
             });
 
+            System.out.println("Enter number of update you want to change: ");
+            String enteredNumber = input.nextLine();
+            System.out.println("Enter your new update: ");
+            String newUpdate = input.nextLine();
+            userData.changeUpdates(userName, enteredNumber, newUpdate);
+
+            System.out.println("");
+            System.out.println("New Updates:");
+            updates.forEach(update -> {
+                int index = updates.indexOf(update);
+                System.out.println(String.format(index + ": " + update));
+            });
             System.out.println("");
             System.out.println("Enter 8 to return to dashboard:");
             String insideOption = input.nextLine();
@@ -112,6 +127,9 @@ public class Main {
             if (insideOption.equals("8")) {        
                 main.userDashBoard(userName, main);
             }
+
+        }   else if(option.equals("4")){
+            System.out.println("you made 4");
 
         } else if (option.equals("5")) {
             ArrayList<String> friends = userData.viewBuddies(userName);
@@ -125,6 +143,7 @@ public class Main {
 
             // display new friends list
             ArrayList<String> newFriends = userData.viewBuddies(userName);
+            System.out.println("");
             System.out.println("Buddy List:");
             newFriends.forEach(friend -> {
                 System.out.println(friend);
