@@ -44,7 +44,7 @@ public class UserData {
         userData.add(user3);
     }
 
-    public ArrayList<String> updateData(String userName) {
+    public ArrayList<String> displayUpdates(String userName) {
         User currentUser;
         for (User user : userData) {
             if (user.myUserName.equals(userName)) {
@@ -54,7 +54,17 @@ public class UserData {
         }
         return new ArrayList<String>();
     }
-    
+
+    public ArrayList<String> changeUpdates(String userName) {
+        User currUser;
+        for (User user : userData) {
+            System.out.println("hello");
+            return update3;
+        }
+        return new ArrayList<String>();
+
+    }
+
     public ArrayList<String> viewBuddies(String userName) {
         User currentUser;
         for (User user : userData) {
