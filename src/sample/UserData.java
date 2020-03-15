@@ -67,15 +67,27 @@ public class UserData {
         return new ArrayList<String>();
     }
 
+    public ArrayList<String> removeUpdate(String userName, String index) {
+        User currentUser;
+        for (User user : userData) {
+            if (user.myUserName.equals(userName)) {
+                currentUser = user;
+                int integerIndex = Integer.parseInt(index);
+                currentUser.updates.remove(integerIndex);
+            }
+        }
+        return new ArrayList<String>();
+    }
+
     public ArrayList<String> viewBuddies(String userName) {
         User currentUser;
         for (User user : userData) {
             if (user.myUserName.equals(userName)) {
                 currentUser = user;
-                return currentUser.friends;   
+                return currentUser.friends;
             }
         }
-        return new ArrayList<String>(); 
+        return new ArrayList<String>();
     }
 
     public void addBuddies(String userName, String newFriend) {

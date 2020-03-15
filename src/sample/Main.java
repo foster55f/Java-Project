@@ -71,8 +71,7 @@ public class Main {
             System.out.println("");
             System.out.println("Updates:");
             updates.forEach(update -> {
-                int index = updates.indexOf(update);
-                System.out.println(String.format(index + ": " + update));
+                System.out.println(update);
             });
 
             System.out.println("");
@@ -108,6 +107,7 @@ public class Main {
                 System.out.println(String.format(index + ": " + update));
             });
 
+            System.out.println("");
             System.out.println("Enter number of update you want to change: ");
             String enteredNumber = input.nextLine();
             System.out.println("Enter your new update: ");
@@ -129,7 +129,34 @@ public class Main {
             }
 
         }   else if(option.equals("4")){
-            System.out.println("you made 4");
+            ArrayList<String> updates = userData.displayUpdates(userName);
+            System.out.println("");
+            System.out.println("Here are your current updates to friends:");
+            System.out.println("");
+            updates.forEach(update -> {
+                int index = updates.indexOf(update);
+                System.out.println(String.format(index + ": " + update));
+            });
+            
+            System.out.println("");
+            System.out.println("Enter number of update you want to remove: ");
+            String enteredNumber = input.nextLine();
+
+            userData.removeUpdate(userName, enteredNumber);
+
+            System.out.println("");
+            System.out.println("New Updates:");
+            updates.forEach(update -> {
+                int index = updates.indexOf(update);
+                System.out.println(String.format(index + ": " + update));
+            });
+            System.out.println("");
+            System.out.println("Enter 8 to return to dashboard:");
+            String insideOption = input.nextLine();
+
+            if (insideOption.equals("8")) {        
+                main.userDashBoard(userName, main);
+            }
 
         } else if (option.equals("5")) {
             ArrayList<String> friends = userData.viewBuddies(userName);
