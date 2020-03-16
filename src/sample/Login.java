@@ -6,16 +6,19 @@ public class Login {
     private ArrayList<String> userNames = new ArrayList<String>();
     private ArrayList<String> passwords = new ArrayList<String>();
 
-    Login(){
+    Login() {
         userNames.add("fosterthepeople");
         userNames.add("auroraisthebest");
         userNames.add("steve");
 
-
-
         passwords.add("foster55");
         passwords.add("aurora55");
         passwords.add("steve55");
+    }
+    
+    public void addUser(String userName, String password) {
+        userNames.add(userName);
+        passwords.add(password);
     }
 
     public boolean checkLogin(String userName, String password) {

@@ -180,9 +180,43 @@ public class Main {
             System.out.println("Enter 8 to return to dashboard:");
             String insideOption = input.nextLine();
 
+            if (insideOption.equals("8")) {
+                main.userDashBoard(userName, main);
+            }
+        } else if (option.equals("6")) {
+            ArrayList<String> friends = userData.viewBuddies(userName);
+            System.out.println("Here are your current buddies:");
+            friends.forEach(friend -> {
+                int index = friends.indexOf(friend);
+                System.out.println(String.format(index + ": " + friend));
+            });
+            System.out.println("What number buddy do you want to remove?:");
+            String buddyToRemove = input.nextLine();
+
+            userData.removeBuddy(userName, buddyToRemove);
+
+            // display new friends list
+            ArrayList<String> newFriends = userData.viewBuddies(userName);
+            System.out.println("");
+            System.out.println("Buddy List:");
+            newFriends.forEach(friend -> {
+                System.out.println(friend);
+            });
+
+            System.out.println("");
+            System.out.println("Enter 8 to return to dashboard:");
+            String insideOption = input.nextLine();
+
             if (insideOption.equals("8")) {        
                 main.userDashBoard(userName, main);
             }
+        } else if (option.equals("7")) {
+            System.out.println("You have logged out");            
+        } else {
+            System.out.println("Please select a valid number");
+            System.out.println("");      
+
+            main.userDashBoard(userName, main);               
         }
     }
     
@@ -192,9 +226,23 @@ public class Main {
         System.out.println("What is your Name: ");
         String name = input.nextLine();
 
-        System.out.println("What do you want for a UserName: ");
+        System.out.println("Please choose a UserName: ");
         String userName = input.nextLine();
-        return "";
+
+        System.out.println("Please choose a Password: ");
+        String password = input.nextLine();
+
+        // create a new user with no current buddies and no current updates
+        currentUser = new User(userName, name, new ArrayList<>(), new ArrayList<>());
+
+        // create a new user login
+        login.addUser(userName, password);
+
+        userData.addUser(currentUser);
+
+        System.out.println("Your account was created ");
+
+        return userName;
     }
 
     public static void main(String[] args) {
