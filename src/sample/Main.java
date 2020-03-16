@@ -226,9 +226,23 @@ public class Main {
         System.out.println("What is your Name: ");
         String name = input.nextLine();
 
-        System.out.println("What do you want for a UserName: ");
+        System.out.println("Please choose a UserName: ");
         String userName = input.nextLine();
-        return "";
+
+        System.out.println("Please choose a Password: ");
+        String password = input.nextLine();
+
+        // create a new user with no current buddies and no current updates
+        currentUser = new User(userName, name, new ArrayList<>(), new ArrayList<>());
+
+        // create a new user login
+        login.addUser(userName, password);
+
+        userData.addUser(currentUser);
+
+        System.out.println("Your account was created ");
+
+        return userName;
     }
 
     public static void main(String[] args) {

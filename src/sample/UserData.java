@@ -44,6 +44,10 @@ public class UserData {
         userData.add(user3);
     }
 
+    public void addUser(User user) {
+        userData.add(user);
+        
+    }
     public ArrayList<String> displayUpdates(String userName) {
         User currentUser;
         for (User user : userData) {
