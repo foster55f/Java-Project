@@ -35,7 +35,7 @@ public class UserData {
         update3.add("Want to go to the movies?");
         update3.add("Whats the deal with homework? You're not working on your home!");
 
-        user1 = new User("fosterthepeople", "foster", friend1, update1);
+        user1 = new User("fostertaylor", "foster", friend1, update1);
         user2 = new User("auroraisthebest", "aurora", friend2, update2);
         user3 = new User("steve", "xman", friend1, update3);
 

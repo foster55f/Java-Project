@@ -7,7 +7,7 @@ public class Login {
     private ArrayList<String> passwords = new ArrayList<String>();
 
     Login() {
-        userNames.add("fosterthepeople");
+        userNames.add("fostertaylor");
         userNames.add("auroraisthebest");
         userNames.add("steve");
 
