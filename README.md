@@ -1,4 +1,4 @@
-# Practice Java with social media wall app
+# Practice Java with social media app
 
 ## Project Overview:
 
