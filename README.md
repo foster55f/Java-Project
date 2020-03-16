@@ -2,7 +2,7 @@
 
 ## Project Overview:
 
-This is a program done so I can practice the Java language
+This was a program done in order to practice the Java language
 
 Things that a user is able to do:
 1. View My Updates
