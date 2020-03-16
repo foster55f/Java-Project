@@ -180,6 +180,33 @@ public class Main {
             System.out.println("Enter 8 to return to dashboard:");
             String insideOption = input.nextLine();
 
+            if (insideOption.equals("8")) {
+                main.userDashBoard(userName, main);
+            }
+        } else if (option.equals("6")) {
+            ArrayList<String> friends = userData.viewBuddies(userName);
+            System.out.println("Here are your current buddies:");
+            friends.forEach(friend -> {
+                int index = friends.indexOf(friend);
+                System.out.println(String.format(index + ": " + friend));
+            });
+            System.out.println("What number buddy do you want to remove?:");
+            String buddyToRemove = input.nextLine();
+
+            userData.removeBuddy(userName, buddyToRemove);
+
+            // display new friends list
+            ArrayList<String> newFriends = userData.viewBuddies(userName);
+            System.out.println("");
+            System.out.println("Buddy List:");
+            newFriends.forEach(friend -> {
+                System.out.println(friend);
+            });
+
+            System.out.println("");
+            System.out.println("Enter 8 to return to dashboard:");
+            String insideOption = input.nextLine();
+
             if (insideOption.equals("8")) {        
                 main.userDashBoard(userName, main);
             }

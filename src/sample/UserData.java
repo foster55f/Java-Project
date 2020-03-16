@@ -98,6 +98,15 @@ public class UserData {
                 currentUser.friends.add(newFriend);   
             }
         }
+        public void removeBuddy(String userName, String index) {
+            User currentUser;
+            for (User user : userData) {
+                if (user.myUserName.equals(userName)) {
+                    currentUser = user;
+                    int integerIndex = Integer.parseInt(index);
+                    currentUser.friends.remove(integerIndex);   
+                }
+            }
     }
 
 
