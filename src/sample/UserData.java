@@ -95,18 +95,20 @@ public class UserData {
         for (User user : userData) {
             if (user.myUserName.equals(userName)) {
                 currentUser = user;
-                currentUser.friends.add(newFriend);   
+                currentUser.friends.add(newFriend);
+            }
+          }
+        }
+        public ArrayList<String> removeBuddy(String userName, String index) {
+            User currentUser;
+        for (User user : userData) {
+            if (user.myUserName.equals(userName)) {
+                currentUser = user;
+                int integerIndex = Integer.parseInt(index);
+                currentUser.friends.remove(integerIndex);
             }
         }
-        public void removeBuddy(String userName, String index) {
-            User currentUser;
-            for (User user : userData) {
-                if (user.myUserName.equals(userName)) {
-                    currentUser = user;
-                    int integerIndex = Integer.parseInt(index);
-                    currentUser.friends.remove(integerIndex);   
-                }
-            }
+        return new ArrayList<String>();        
     }
 
 

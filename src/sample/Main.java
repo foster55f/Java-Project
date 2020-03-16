@@ -210,6 +210,13 @@ public class Main {
             if (insideOption.equals("8")) {        
                 main.userDashBoard(userName, main);
             }
+        } else if (option.equals("7")) {
+            System.out.println("You have logged out");            
+        } else {
+            System.out.println("Please select a valid number");
+            System.out.println("");      
+
+            main.userDashBoard(userName, main);               
         }
     }
     
