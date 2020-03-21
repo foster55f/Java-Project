@@ -14,7 +14,7 @@ Things that a user is able to do:
 7. Logout
 
 ## Setup:
-In order to run this program, you can start by cloning down this repo. Since this is in java, you will need to compile the java files into class files, so from the directory run this command to compile your classes: 
+In order to run this program, you can start by cloning down this repo. Since this is in java, you will need to compile the java files into class files, so from the sample file run this command to compile your classes: 
 ```
 javac Main.java, javac UserData.java, javac Login.java, javac User.java
 ```
@@ -26,6 +26,7 @@ java Main
 
 ## Wins:
 * This project was quite the learning experience coming from JavaScript to learn this new Java language.  I used CodeAcademy as my main resource in learning.  I also used a Turing classmate as a resource in learning Java since he had done a recent project in Java.  It was enjoyable to use Java's class based lanaguage and continue to build on OOP principles that I have used with JavaScript.
+
 * As a user, you are able to add buddies, delete buddies, change an update, delete an update, view your buddies, and view your updates.
 
 ## Future Iterations:
